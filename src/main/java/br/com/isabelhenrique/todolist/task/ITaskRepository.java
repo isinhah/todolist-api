@@ -8,5 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface ITaskRepository extends JpaRepository<TaskModel, UUID> {
   // Encontrar tarefa por id
   List<TaskModel> findByIdUser(UUID idUser);
+
   // Atualizar tarefa
+  TaskModel findByIdAndIdUser(UUID id, UUID idUser);
 }
